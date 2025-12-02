@@ -1,12 +1,14 @@
-// src/components/Charities.jsx
+import CharityBg from "../assets/IMAGE8.png";
+import CharityLogos from "../assets/FrameBg.png";
+
 export default function Charities() {
   return (
     <section
       className="py-16 md:py-20 text-white bg-cover bg-center"
-      // Use the blue IMAGE8.png as the background
-      style={{ backgroundImage: "url('src/assets/IMAGE8.png')" }} 
+      style={{ backgroundImage: `url(${CharityBg})` }}
     >
       <div className="max-w-6xl mx-auto px-4 text-center">
+
         {/* Headings */}
         <h2 className="text-3xl md:text-4xl font-bold mb-2">
           Our Charitable Initiatives
@@ -22,12 +24,11 @@ export default function Charities() {
           supporting charities and global health research initiatives.
         </p>
 
-        {/* Logos strip */}
+        {/* Logos Strip */}
         <img
-          // Use the FrameBg.png which contains the logos
-          src="src/assets/FrameBg.png"
-          alt="Charity partners: Prostate Cancer Foundation, American Tinnitus Association, U.S. Pain Foundation, American Diabetes Association, American Heart Association"
-          className="w-full max-w-5xl mx-auto h-auto object-contain"
+          src={CharityLogos}
+          alt="Charity partners"
+          className="w-full max-w-5xl mx-auto object-contain"
         />
       </div>
     </section>

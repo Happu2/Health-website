@@ -1,3 +1,5 @@
+import ProductsBanner from "../assets/products.png";
+
 const productCategories = [
   "Results-Driven",
   "All-Natural",
@@ -34,7 +36,6 @@ export default function BestSellers() {
           {productCategories.map((c, idx) => (
             <div key={c} className="flex items-center">
               <span className="cursor-pointer hover:text-blue-600">{c}</span>
-
               {idx < productCategories.length - 1 && (
                 <span className="mx-3 text-gray-400">|</span>
               )}
@@ -42,20 +43,19 @@ export default function BestSellers() {
           ))}
         </div>
 
-        {/* ONE SINGLE IMAGE */}
+        {/* Products Banner */}
         <div className="rounded-2xl overflow-hidden mb-10">
           <img
-            src="/src/assets/products.png"
+            src={ProductsBanner}
             alt="Best Selling Products"
             className="w-full h-auto object-contain"
           />
         </div>
 
-        {/* Product Cards */}
+        {/* Product Names + Rating */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 text-center">
           {products.map((p) => (
             <div key={p.name} className="flex flex-col items-center">
-
               <h3 className="font-semibold text-lg mb-1">{p.name}</h3>
 
               <div className="text-yellow-500 text-xl mb-3">
@@ -64,14 +64,13 @@ export default function BestSellers() {
 
               <button
                 className="
-                  border border-blue-600 text-blue-600
+                  border border-blue-600 text-blue-600 
                   px-6 py-2 rounded-md text-sm font-medium
                   hover:bg-blue-600 hover:text-white transition
                 "
               >
                 Shop Now
               </button>
-
             </div>
           ))}
         </div>

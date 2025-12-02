@@ -1,14 +1,18 @@
 // src/components/Footer.jsx
+import FooterLogo from "../assets/Rectangle 730.png";
+import CardsImg from "../assets/cards.png";
+
 export default function Footer() {
   return (
     <footer className="bg-[#F5F6FA] text-gray-800 pt-10">
       {/* TOP: Address + Products */}
       <div className="max-w-6xl mx-auto px-4 md:px-6">
         <div className="flex flex-col md:flex-row pb-10 border-b border-gray-300">
+          
           {/* LEFT: Address */}
           <div className="md:w-1/3 mb-8 md:mb-0 md:pr-8">
             <img
-              src="src/assets/Rectangle 730.png"
+              src={FooterLogo}
               alt="Health Desk Clinic"
               className="h-10 mb-6 object-contain"
             />
@@ -86,7 +90,7 @@ export default function Footer() {
 
         {/* payment icons image */}
         <img
-          src="src/assets/cards.png"        // <- put your card-icons image here
+          src={CardsImg}
           alt="Payment methods"
           className="mx-auto h-8 object-contain"
         />
